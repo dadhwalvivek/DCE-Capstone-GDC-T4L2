@@ -41,6 +41,7 @@ Final Process
 
  
 Requirements
+
 For building and running the application you need:
 •	JDK 1.8
 •	Maven 3
@@ -95,8 +96,6 @@ The end user needs to follow the below mentioned steps to get started with:
 
             // Save the result to the specified location.
             result.saveAs("filePath+fileName"+custID+".pdf");
-
-
     }catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
         LOGGER.error("Exception encountered while DocGen executing operation", ex);
     }
@@ -183,13 +182,16 @@ public String sendForSignature(String customerId, String email){
 }
 
 Recommendation
+
 It's recommended to create an instance of ApiClient per thread and per user (with baseUris fetched for user) in a multithreaded environment to avoid any potential issues.
 
 Running the application locally
+
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the main method in the adobe-sign-main\src\main\java\com\hr\docsigning\ DocsigningApplication class from your IDE.
 
 
 Steps to run
+
 1.	Build the project using mvn clean install
 2.	Run using mvn spring-boot:run
 3.	The web application is accessible via localhost:8080
