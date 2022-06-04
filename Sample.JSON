@@ -1,0 +1,34 @@
+Sample JSON
+{
+    "Title": "Mr.",
+    "Name": "Bhavesh",
+    "Street": "123",
+    "City": "Bangalore",
+    "State": "KA",
+    "Zip": "513265",
+    "CustomerId": "2505222",
+    "CCNo": "4578652378964150",
+    "Segment": "Silver",
+    "Limit": "150000",
+    "Outstanding": "100000",
+    "SettlementAmt": "20000",
+    "DueDate": "26-07-2022",
+    "Settlements": [
+        {
+            "SrNo": "1",
+            "Mode Of Payment": "cash",
+            "Bank Name": "-",
+            "Branch": "-",
+            "Due Date": "26-06-2022",
+            "Amount": "40000"
+        },
+        {
+            "SrNo": "2",
+            "Mode Of Payment": "cash",
+            "Bank Name": "-",
+            "Branch": "-",
+            "Due Date": "26-07-2022",
+            "Amount": "40001"
+        }
+    ]
+}
