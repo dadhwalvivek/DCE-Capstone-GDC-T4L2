@@ -107,8 +107,6 @@ The end user needs to follow the below mentioned steps to get started with:
 
 
 
-        //ApiClient apiClient = new ApiClient();
-
         ApiClient apiClient= Configuration.getDefaultApiClient();
 
         System.out.println("*********************************");
