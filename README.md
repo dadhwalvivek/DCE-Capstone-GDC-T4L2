@@ -41,12 +41,12 @@ Once code is added, the next step will be as:
 
  
 **Requirements**
-- For building and running the application you need:
+For building and running the application you need:
 •	JDK 1.8
 •	Maven 3
 
 **Installation**
-- To install the Document Service API, upgrade the pdfservices-api-credentials.json with right client and account credentials, generated from https://developer.adobe.com/
+ To install the Document Service API, upgrade the pdfservices-api-credentials.json with right client and account credentials, generated from https://developer.adobe.com/
 To install the API client library to your local repository:
 At first generate the JAR either by executing:
 mvn package
@@ -62,7 +62,8 @@ Then manually install the following JARs:
 •	okhttp-2.7.5.jar
 •	gson-2.8.1.jar
 •	gson-fire-1.8.0.jar
-Getting Started
+
+**Getting Started**
 The end user needs to follow the below mentioned steps to get started with:
 1.	Once the correct format ed CSV is uploaded, method runDocGenProcess get called followed by relevant unique ids, as required. It basically loads the JSON format as per the tags, calculated fields or conditions into the sample document and then return the success response else failure. 
 
@@ -163,9 +164,6 @@ The end user needs to follow the below mentioned steps to get started with:
         AgreementCreationResponse agreementCreationResponse = agreementsApi.createAgreement(authorization, agreementInfo, xApiUser, xOnBehalfOfUser);
         id = agreementCreationResponse.getId();
         System.out.println("********************* Agreement ID " +id); 
-
-
-
 
 **Recommendation**
 - It's recommended to create an instance of ApiClient per thread and per user (with baseUris fetched for user) in a multithreaded environment to avoid any potential issues.
