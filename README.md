@@ -65,7 +65,7 @@ Then manually install the following JARs:
 
 **Getting Started**
 The end user needs to follow the below mentioned steps to get started with:
-1.	Once the correct format ed CSV is uploaded, method runDocGenProcess get called followed by relevant unique ids, as required. It basically loads the JSON format as per the tags, calculated fields or conditions into the sample document and then return the success response else failure. 
+1.	Once the correct formated CSV is uploaded, method runDocGenProcess get called followed by relevant unique ids, as required. It basically loads the JSON format as per the tags, calculated fields or conditions into the sample document and then return the success response else failure. 
 
 2.
         // Initial setup, create credentials instance.
