@@ -30,24 +30,23 @@ Once code is added, the next step will be as:
 
 ### Sample for csv file will be provided shortly.
 ### Details of Execution will be published once the code is added.
-Current Process
+**Current Process**
 
  ![image](https://user-images.githubusercontent.com/51231889/172003642-e68d8a69-01e5-4263-b6ef-215d4e1fac98.png)
 
 
-Final Process
+**Final Process**
 
 ![image](https://user-images.githubusercontent.com/51231889/172003669-c44a8342-cf69-4cae-a630-32beba8c8f4c.png)
 
  
-Requirements
-
-For building and running the application you need:
+**Requirements**
+- For building and running the application you need:
 •	JDK 1.8
 •	Maven 3
 
-Installation
-To install the Document Service API, upgrade the pdfservices-api-credentials.json with right client and account credentials, generated from https://developer.adobe.com/
+**Installation**
+- To install the Document Service API, upgrade the pdfservices-api-credentials.json with right client and account credentials, generated from https://developer.adobe.com/
 To install the API client library to your local repository:
 At first generate the JAR either by executing:
 mvn package
@@ -173,25 +172,22 @@ public String sendForSignature(String customerId, String email){
         AgreementsApi agreementsApi = new AgreementsApi(apiClient);
         AgreementCreationResponse agreementCreationResponse = agreementsApi.createAgreement(authorization, agreementInfo, xApiUser, xOnBehalfOfUser);
         id = agreementCreationResponse.getId();
-        System.out.println("********************* Agreement ID " +id); 
-}
-    catch (Exception e) {
+        System.out.println("********************* Agreement ID " +id);
+        }catch (Exception e) {
         System.err.println(e.toString());
     }
     return id;
 }
 
-Recommendation
 
-It's recommended to create an instance of ApiClient per thread and per user (with baseUris fetched for user) in a multithreaded environment to avoid any potential issues.
+**Recommendation**
+- It's recommended to create an instance of ApiClient per thread and per user (with baseUris fetched for user) in a multithreaded environment to avoid any potential issues.
 
-Running the application locally
+**Running the application locally**
+- There are several ways to run a Spring Boot application on your local machine. One way is to execute the main method in the adobe-sign-main\src\main\java\com\hr\docsigning\ DocsigningApplication class from your IDE.
 
-There are several ways to run a Spring Boot application on your local machine. One way is to execute the main method in the adobe-sign-main\src\main\java\com\hr\docsigning\ DocsigningApplication class from your IDE.
 
-
-Steps to run
-
+**Steps to run**
 1.	Build the project using mvn clean install
 2.	Run using mvn spring-boot:run
 3.	The web application is accessible via localhost:8080
