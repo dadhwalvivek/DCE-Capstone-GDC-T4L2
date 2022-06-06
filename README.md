@@ -178,6 +178,25 @@ The end user needs to follow the below mentioned steps to get started with:
 3.	The web application is accessible via localhost:8080
 
 
+## Power Automate Flow
+This Power Automate flow will use the Adobe Extract API service to check if the document is digitally/Electronically signed. 
+
+Further, the Acrobat Adobe Sign Form Data API will check for specific fields. Based upon that respective documents will be sent to respective departments of the bank for further process. 
+
+Flow Process: 
+1. Trigger this flow using the Adobe Sign trigger: whenever a document is signed. 
+2. Fetch the signed PDF document. 
+3. Fetch the CSV for the signed document. 
+4. Used some composed functions to convert the CSV in the above step into a JSON file. 
+5. Parse that JSON to define the same in conditions. 
+6. Use Extract API to fetch the JSON for a document. 
+7. Parse the JSON for the above step. 
+8. Apply conditions from the JSON received above and send them to respective departments of the bank for further process. 
+
+NOTE: Because this is only being used for one type of template, if you use your document, the flow might fail while parsing the JSON step. You will need to fetch the output before the Parse JSON step and add it under the edit mode of Parse JSON to make it work. 
+
+Also, the conditions have certain specific fields related to our template. You might need to change them in order to make the flow work according to your needs.
+
 
 ## More Info
 More information on different APIs used as part of this project is available at:
